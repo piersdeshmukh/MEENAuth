@@ -9,7 +9,7 @@ connect.then(() => {
     console.log("Database cannot be Connected");
 })
 
-// Create Schema
+// Create Schema(structure of table(structure of data for the document))
 const Loginschema = new mongoose.Schema({
     name: {
         type:String,
@@ -21,7 +21,7 @@ const Loginschema = new mongoose.Schema({
     }
 });
 
-// collection part
+// collection part(create table(document) named users using Loginschema's structure)
 const collection = new mongoose.model("users", Loginschema);
 
 module.exports = collection;

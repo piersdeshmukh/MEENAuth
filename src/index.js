@@ -4,8 +4,8 @@ const collection = require("./config");
 const bcrypt = require('bcrypt');
 
 const app = express();
-// convert data into json format
-app.use(express.json());
+// convert frontend's raw JSON data into a JavaScript object and attach it to req.body, so that u can access parse & access req's data directly like:  req.body.username 
+app.use(express.json()); // .
 // Static file
 app.use(express.static("public"));
 
